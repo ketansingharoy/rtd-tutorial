@@ -1,4 +1,4 @@
-.. |SMU_logo| image:: ../../logo/SMU_logo.png
+.. |SMU_logo| image:: ../../SMU_logo.png
     :height: 150
 
 Welcome to SeisScan Documentation!
