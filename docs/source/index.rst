@@ -20,4 +20,6 @@ Contents
       Choice of maximum interstation distance
       Subnetwork selection and characteristic function
    Backprojection
+      Prepare travel time lookup table
+      Detection and location
    API
