@@ -19,5 +19,5 @@ Contents
       Choice of sliding window length for estimating Peak Cross-correlation Function
       Choice of maximum interstation distance
       Subnetwork selection and characteristic function
-      Backprojection
+   Backprojection
    API
