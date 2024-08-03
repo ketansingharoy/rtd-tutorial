@@ -1,11 +1,7 @@
 Welcome to SeisScan Documentation!
 ==================================
 
-**SeisScan** is an open source Python package to detect and locate microearthquakes. The method leverages the signal coherence across clusters of seismic stations to generate characteristic functions that are backprojected (migrated) to detect and locate seismic events.
-and offers a *simple* and *intuitive* API.
-
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+**SeisScan** is an open source Python package to detect and locate microearthquakes. The method leverages the signal coherence across clusters of seismic stations to generate characteristic functions that are backprojected (migrated) to detect and locate seismic events. The following table of content contains infomation to install and use the package.
 
 .. note::
 
@@ -16,5 +12,12 @@ Contents
 
 .. toctree::
 
-   usage
-   api
+   Installation
+   Reading seismograms
+   Tuning SeisScan
+      Choice of minimum interstation distance and frequency range of interest (Coherency analysis)
+      Choice of sliding window length for estimating Peak Cross-correlation Function
+      Choice of maximum interstation distance
+      Subnetwork selection and characteristic function
+      Backprojection
+   API
