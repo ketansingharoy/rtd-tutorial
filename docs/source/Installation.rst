@@ -15,5 +15,5 @@ Install dependencies
 
 Add SeisScan to python path
 ::
-    import sys
-    sys.path.insert(0, "path to SeisScan")
+    >>> import sys
+    >>> sys.path.insert(0, "path to SeisScan")
