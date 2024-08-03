@@ -1,9 +1,7 @@
-SeisScan
-===================================
+Welcome to SeisScan Documentation!
+==================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
+**SeisScan** is an open source Python package to detect and locate microearthquakes. The method leverages the signal coherence across clusters of seismic stations to generate characteristic functions that are backprojected (migrated) to detect and locate seismic events.
 and offers a *simple* and *intuitive* API.
 
 Check out the :doc:`usage` section for further information, including
