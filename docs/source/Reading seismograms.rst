@@ -7,7 +7,9 @@ The ``SeisScan.read_fdsn`` function utilizes `FDSN web service client for ObsPy 
 
 Let's do the following example. In a python file or jupyter notebook cell, type the following commands to import some important libraries.
 
-Don't forget to replace "path-to-SeisScan-directory" by SeisScan absolute path.
+.. note::
+
+    Don't forget to replace "path-to-SeisScan-directory" by SeisScan absolute path.
 
 >>> import sys
 >>> from obspy import UTCDateTime
