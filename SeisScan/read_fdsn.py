@@ -16,19 +16,29 @@ def read_fdsn(starttime, endtime, network, station, location, channel, provider=
         "https://docs.obspy.org/packages/autogen/obspy.clients.fdsn.client.Client.html#obspy.clients.fdsn.client.Client".
     
     Input:
-        starttime: Start time for waveform and metadata. It is an Obspy.UTCDateTime object.
-        endtime: End time for waveform and metadata. It is an Obspy.UTCDateTime object.
-        network: One or more network codes seperated by comma.
-        station: One or more station codes seperated by comma.
-        location: One or more location codes seperated by comma.
-        channel: One or more channel codes seperated by comma.
-        provider: A key string for recognized FDSN server. default is 'IRIS'.
+        :param starttime: Start time for waveform and metadata.
+        :type starttime: obspy.UTCDateTime
+        :param endtime: End time for waveform and metadata.
+        :type starttime: obspy.UTCDateTime
+        :param network: One or more network codes seperated by comma.
+        :type network: str
+        :param station: One or more station codes seperated by comma.
+        :type station: str
+        :param location: One or more location codes seperated by comma.
+        :type location: str
+        :param channel: One or more channel codes seperated by comma.
+        :type channel: str
+        :param provider: A key string for recognized FDSN server. default is 'IRIS'.
                 It is one of 'IRIS', 'IRISPH5', 'GEOFON' etc. Please see the above link for all the providers.
-        attach_coordinates (bool): If True, station coordinates are attached in each trace stats. Default is True.
-        attach_response (bool): If True, station response information is attached to each trace stats. Default is True
+        :type provider: str
+        :param attach_coordinates: If True, station coordinates are attached in each trace stats. Default is True.
+        :type attach_coordinates: bool
+        :param attach_response: If True, station response information is attached to each trace stats. Default is True.
+        :type attach_response: bool
         
     Returns:
-        Obspy Stream.
+        :return: Obspy Stream.
+        :rtype: obspy.Stream.
     """
     
     #--- client for FDSN web server
