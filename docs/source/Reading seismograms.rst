@@ -30,3 +30,7 @@ Now, it's time to pull some data from IRIS FDSN with the following parameters.
 >>> attach_response = True
 >>> starttime = UTCDateTime('2016-07-11 05:55:00')
 >>> endtime = starttime + 60
+
+Hit the following commands to pull data.
+
+>>> st = ss.read_fdsn(starttime, endtime, network, station, location, channel, provider=provider)
