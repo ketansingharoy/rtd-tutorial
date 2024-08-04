@@ -5,7 +5,7 @@ import pickle
 def read_example():
     """
     Description:
-        Reads example data. This function returns Obspy.Stream, a list ofreference_secondaries and a path to earth model.
+        Reads example data. This function returns Obspy.Stream, a list of reference_secondaries and a path to earth model.
     """
 
     #--- example data directory
