@@ -36,7 +36,7 @@ Hit the following commands to pull data.
 >>> st = ss.read_fdsn(starttime, endtime, network, station, location, channel, provider=provider)
 
 Print the first ``trace stats`` to check the contents. This is just a regular ``ObsPy Trace stats`` object with two extra attributes.
-Attribute ``response`` contains intriment response information and attribute ``sac`` contains station coordinates.
+Attribute ``response`` contains intrument response information and attribute ``sac`` contains station coordinates.
 The station coordinates are important for further computation.
 
 >>> print(st[0].stats)
@@ -62,3 +62,7 @@ _fdsnws_dataselect_url: http://service.iris.edu/ph5ws/dataselect/1/query
 		Stage 2: ResponseStage from V to V, gain: 4
 		Stage 3: CoefficientsTypeResponseStage from V to COUNTS, gain: 3.3554e+06
                    sac: AttribDict({'stlo': -97.739831, 'stla': 36.622301, 'stel': 322.3})
+
+Finally, plot the stream.
+
+>>> st.plot()
