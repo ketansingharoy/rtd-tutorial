@@ -1,5 +1,8 @@
 """
 SeisScan - Python library for microearthquake detection and location.
+
+.. code-block:: python
+    import SeisScan
 """
 
 __version__ = "0.1.0"
