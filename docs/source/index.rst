@@ -28,3 +28,10 @@ Contents
       Prepare travel time lookup table
       Detection and location
    API
+
+Indices and tables
+===================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
