@@ -35,9 +35,11 @@ Hit the following commands to pull data.
 
 >>> st = ss.read_fdsn(starttime, endtime, network, station, location, channel, provider=provider)
 
-Print the first trace to check the contents.
+Print the first ``trace stats`` to check the contents. This is just a regular ``ObsPy Trace stats`` object with two extra attributes.
+Attribute ``response`` contains intriment response information and attribute ``sac`` contains station coordinates.
+The station coordinates are important for further computation.
 
->>> print(st[0])
+>>> print(st[0].stats)
                network: YW
                station: 1002
               location: 
