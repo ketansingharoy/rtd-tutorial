@@ -66,3 +66,6 @@ _fdsnws_dataselect_url: http://service.iris.edu/ph5ws/dataselect/1/query
 Finally, plot the stream.
 
 >>> st.plot()
+
+.. image:: ../../usage/waveform.png
+    :width: 600
