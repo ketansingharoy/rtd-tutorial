@@ -97,7 +97,7 @@ def read_fdsn_inventory(starttime, endtime, network, station, location, channel,
     Returns
     -------
     inventory: Obspy.Inventory
-        
+        Station metadata.
     """
     
     #--- client for FDSN web server
