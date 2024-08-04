@@ -2,13 +2,8 @@ API
 ===
 
 .. autosummary::
-   :toctree: generated/
-   :nosignatures:
+   :toctree: generated
 
    SeisScan
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-   generated/SeisScan
+      SeisScan.read_fdsn
+      SeisScan.read_fdsn_inventory
