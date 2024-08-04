@@ -1,6 +1,3 @@
-.. |SMU_logo| image:: ../../SMU_logo.png
-    :width: 300
-
 Welcome to SeisScan Documentation!
 ==================================
 
