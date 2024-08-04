@@ -24,8 +24,8 @@ def read_fdsn(starttime, endtime, network, station, location, channel, provider=
         :channel (str): One or more channel codes seperated by comma.
         :provider (str): A key string for recognized FDSN server. It is one of 'IRIS', 'IRISPH5', 'GEOFON' etc.
                          Please see the above link for all the providers.. default is 'IRIS'.
-        :param attach_coordinates (bool): If True, station coordinates are attached in each trace stats. Default is True.
-        :param attach_response (bool): If True, station response information is attached to each trace stats. Default is True.
+        :attach_coordinates (bool): If True, station coordinates are attached in each trace stats. Default is True.
+        :attach_response (bool): If True, station response information is attached to each trace stats. Default is True.
         
     Returns:
         :return: Obspy Stream.
