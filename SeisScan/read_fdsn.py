@@ -16,29 +16,19 @@ def read_fdsn(starttime, endtime, network, station, location, channel, provider=
         "https://docs.obspy.org/packages/autogen/obspy.clients.fdsn.client.Client.html#obspy.clients.fdsn.client.Client".
     
     Input:
-        :param starttime: Start time for waveform and metadata.
-        :type starttime: obspy.UTCDateTime
-        :param endtime: End time for waveform and metadata.
-        :type starttime: obspy.UTCDateTime
-        :param network: One or more network codes seperated by comma.
-        :type network: str
-        :param station: One or more station codes seperated by comma.
-        :type station: str
-        :param location: One or more location codes seperated by comma.
-        :type location: str
-        :param channel: One or more channel codes seperated by comma.
-        :type channel: str
-        :param provider: A key string for recognized FDSN server. default is 'IRIS'.
-                It is one of 'IRIS', 'IRISPH5', 'GEOFON' etc. Please see the above link for all the providers.
-        :type provider: str
-        :param attach_coordinates: If True, station coordinates are attached in each trace stats. Default is True.
-        :type attach_coordinates: bool
-        :param attach_response: If True, station response information is attached to each trace stats. Default is True.
-        :type attach_response: bool
+        :starttime (obspy.UTCDateTime): Start time for waveform and metadata.
+        :endtime (obspy.UTCDateTime): End time for waveform and metadata.
+        :network (str): One or more network codes seperated by comma.
+        :station (str): One or more station codes seperated by comma.
+        :location (str): One or more location codes seperated by comma.
+        :channel (str): One or more channel codes seperated by comma.
+        :provider (str): A key string for recognized FDSN server. It is one of 'IRIS', 'IRISPH5', 'GEOFON' etc.
+                         Please see the above link for all the providers.. default is 'IRIS'.
+        :param attach_coordinates (bool): If True, station coordinates are attached in each trace stats. Default is True.
+        :param attach_response (bool): If True, station response information is attached to each trace stats. Default is True.
         
     Returns:
         :return: Obspy Stream.
-        :rtype: obspy.Stream.
     """
     
     #--- client for FDSN web server
