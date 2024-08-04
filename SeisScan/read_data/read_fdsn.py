@@ -71,25 +71,33 @@ def read_fdsn(starttime, endtime, network, station, location, channel, provider=
 
 
 def read_fdsn_inventory(starttime, endtime, network, station, location, channel, provider="IRIS"):
-    """
-    Description:
-        read_fdsn_inventory connects to FDSN web service of IRIS to retrive station Inventory.
-        
-        It utilizes obspy.clients.fdsn.Client service to download inventory. For more information on the service, please visit
-        "https://docs.obspy.org/packages/autogen/obspy.clients.fdsn.client.Client.html#obspy.clients.fdsn.client.Client".
+    """Connects to FDSN web service of IRIS to retrive station Inventory.
+    It utilizes obspy.clients.fdsn.Client service to download inventory.
+    For more information on the service, please visit
+    "https://docs.obspy.org/packages/autogen/obspy.clients.fdsn.client.Client.html#obspy.clients.fdsn.client.Client".
     
-    Input:
-        :starttime (obspy.UTCDateTime): Start time for waveform and metadata.
-        :endtime (obspy.UTCDateTime): End time for waveform and metadata.
-        :network (str): One or more network codes seperated by comma. It supports wildcards.
-        :station (str): One or more station codes seperated by comma. It supports wildcards.
-        :location (str): One or more location codes seperated by comma. It supports wildcards.
-        :channel (str): One or more channel codes seperated by comma. It supports wildcards.
-        :provider (str): A key string for recognized FDSN server. It is one of 'IRIS', 'IRISPH5', 'GEOFON' etc.
-                         Please see the above link for all the providers. Default is 'IRIS'.
+    Parameters
+    ----------
+    starttime: obspy.UTCDateTime
+        Start time for waveform and metadata.
+    endtime: obspy.UTCDateTime
+        End time for waveform and metadata.
+    network: str
+        One or more network codes seperated by comma. It supports wildcards.
+    station: str
+        One or more station codes seperated by comma. It supports wildcards.
+    location: str
+        One or more location codes seperated by comma. It supports wildcards.
+    channel: str
+        One or more channel codes seperated by comma. It supports wildcards.
+    provider: str
+        A key string for recognized FDSN server. It is one of 'IRIS', 'IRISPH5', 'GEOFON' etc.
+        Please see the above link for all the providers. Default is 'IRIS'.
         
-    Returns:
-        Obspy.Inventory
+    Returns
+    -------
+    inventory: Obspy.Inventory
+        
     """
     
     #--- client for FDSN web server
@@ -106,3 +114,41 @@ def read_fdsn_inventory(starttime, endtime, network, station, location, channel,
         pass
         
     return inventory
+
+
+# def read_fdsn_inventory(starttime, endtime, network, station, location, channel, provider="IRIS"):
+#     """
+#     Description:
+#         read_fdsn_inventory connects to FDSN web service of IRIS to retrive station Inventory.
+        
+#         It utilizes obspy.clients.fdsn.Client service to download inventory. For more information on the service, please visit
+#         "https://docs.obspy.org/packages/autogen/obspy.clients.fdsn.client.Client.html#obspy.clients.fdsn.client.Client".
+    
+#     Input:
+#         :starttime (obspy.UTCDateTime): Start time for waveform and metadata.
+#         :endtime (obspy.UTCDateTime): End time for waveform and metadata.
+#         :network (str): One or more network codes seperated by comma. It supports wildcards.
+#         :station (str): One or more station codes seperated by comma. It supports wildcards.
+#         :location (str): One or more location codes seperated by comma. It supports wildcards.
+#         :channel (str): One or more channel codes seperated by comma. It supports wildcards.
+#         :provider (str): A key string for recognized FDSN server. It is one of 'IRIS', 'IRISPH5', 'GEOFON' etc.
+#                          Please see the above link for all the providers. Default is 'IRIS'.
+        
+#     Returns:
+#         Obspy.Inventory
+#     """
+    
+#     #--- client for FDSN web server
+#     client = Client(base_url=provider)
+    
+#     #--- download inventory
+#     inventory = Inventory()
+    
+#     try:
+#         inventory += client.get_stations(starttime=starttime, endtime=endtime,
+#                                         network=network, station=station, location=location, channel=channel,
+#                                         level='response')
+#     except:
+#         pass
+        
+#     return inventory
