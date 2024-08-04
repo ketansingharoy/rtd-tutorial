@@ -68,4 +68,4 @@ Finally, plot the stream.
 >>> st.plot()
 
 .. image:: ../../usage/waveform.png
-    :width: 600
+    :width: 1200
