@@ -18,17 +18,17 @@ def read_fdsn(starttime, endtime, network, station, location, channel, provider=
     Input:
         :starttime (obspy.UTCDateTime): Start time for waveform and metadata.
         :endtime (obspy.UTCDateTime): End time for waveform and metadata.
-        :network (str): One or more network codes seperated by comma.
-        :station (str): One or more station codes seperated by comma.
-        :location (str): One or more location codes seperated by comma.
-        :channel (str): One or more channel codes seperated by comma.
+        :network (str): One or more network codes seperated by comma. It supports wildcards.
+        :station (str): One or more station codes seperated by comma. It supports wildcards.
+        :location (str): One or more location codes seperated by comma. It supports wildcards.
+        :channel (str): One or more channel codes seperated by comma. It supports wildcards.
         :provider (str): A key string for recognized FDSN server. It is one of 'IRIS', 'IRISPH5', 'GEOFON' etc.
-                         Please see the above link for all the providers.. default is 'IRIS'.
+                         Please see the above link for all the providers. Default is 'IRIS'.
         :attach_coordinates (bool): If True, station coordinates are attached in each trace stats. Default is True.
         :attach_response (bool): If True, station response information is attached to each trace stats. Default is True.
         
     Returns:
-        :return: Obspy Stream.
+        Obspy.Stream
     """
     
     #--- client for FDSN web server
@@ -79,17 +79,17 @@ def read_fdsn_inventory(starttime, endtime, network, station, location, channel,
         "https://docs.obspy.org/packages/autogen/obspy.clients.fdsn.client.Client.html#obspy.clients.fdsn.client.Client".
     
     Input:
-        starttime: Start time for waveform and metadata. It is an Obspy.UTCDateTime object.
-        endtime: End time for waveform and metadata. It is an Obspy.UTCDateTime object.
-        network: One or more network codes seperated by comma.
-        station: One or more station codes seperated by comma.
-        location: One or more location codes seperated by comma.
-        channel: One or more channel codes seperated by comma.
-        provider: A key string for recognized FDSN server. default is 'IRIS'.
-                It is one of 'IRIS', 'IRISPH5', 'GEOFON' etc. Please see the above link for all the providers.
+        :starttime (obspy.UTCDateTime): Start time for waveform and metadata.
+        :endtime (obspy.UTCDateTime): End time for waveform and metadata.
+        :network (str): One or more network codes seperated by comma. It supports wildcards.
+        :station (str): One or more station codes seperated by comma. It supports wildcards.
+        :location (str): One or more location codes seperated by comma. It supports wildcards.
+        :channel (str): One or more channel codes seperated by comma. It supports wildcards.
+        :provider (str): A key string for recognized FDSN server. It is one of 'IRIS', 'IRISPH5', 'GEOFON' etc.
+                         Please see the above link for all the providers. Default is 'IRIS'.
         
     Returns:
-        Obspy Inventory.
+        Obspy.Inventory
     """
     
     #--- client for FDSN web server
