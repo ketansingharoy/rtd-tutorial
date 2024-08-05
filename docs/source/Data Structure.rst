@@ -6,7 +6,7 @@ The following datasets are required:
 
 ObsPy.Stream with station metadata added
 ----------------------------------------
-An ``ObsPy.Stream`` object contains a number of ``Obspy.Trace`` objects. Station coordinates are to be attached to each ``Obspy.Trace``. Optionally, station response information can also be attached to each trace. Let's follow the `ObsPy example <https://docs.obspy.org/packages/obspy.clients.fdsn.html>_` perform the following example where we shall download data from FDSN webserver at IRIS with ``ObsPy`` package.
+An ``ObsPy.Stream`` object contains a number of ``Obspy.Trace`` objects. Station coordinates are to be attached to each ``Obspy.Trace``. Optionally, station response information can also be attached to each trace. Let's follow the `ObsPy example <https://docs.obspy.org/packages/obspy.clients.fdsn.html>`_ perform the following example where we shall download data from FDSN webserver at IRIS with ``ObsPy`` package.
 
 
 >>> from obspy.core import AttribDict
