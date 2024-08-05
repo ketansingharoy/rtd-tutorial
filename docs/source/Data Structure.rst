@@ -63,17 +63,10 @@ _fdsnws_dataselect_url: http://service.iris.edu/fdsnws/dataselect/1/query
 
 >>> import SeisScan as ss
 >>>
->>> provider = "IRIS" # key string for FDSN web server
->>> network = "IU"
->>> station = "ANMO"
->>> location = "00"
->>> channel = "LHZ"
->>> attach_coordinates = True
->>> attach_response = True
 >>> starttime = UTCDateTime("2010-02-27T06:45:00.000")
 >>> endtime = starttime + 60
 >>>
->>> st = ss.read_fdsn(starttime, endtime, network, station, location, channel, provider=provider)
+>>> st = ss.read_fdsn(starttime, endtime, "IU", "ANMO", "00", "LHZ", provider="IRIS")
 >>> print(st[0].stats)
 
 
