@@ -58,8 +58,11 @@ _fdsnws_dataselect_url: http://service.iris.edu/fdsnws/dataselect/1/query
                    sac: AttribDict({'stlo': -106.457133, 'stla': 34.945981, 'stel': 1671.0})
 
 
-Station Subnetworks
--------------------
+2. Station Subnetworks
+----------------------
+A ``Subnetwork`` is a station cluster where the central station is defined as the reference station, whereas the remaining stations are called secondary stations. It is represented by a ``Dictionary`` with two keys, "reference" and "secondaries".
+
+>>> subnetwork = {"reference": "STA01", "secondaries":["STA02", "STA03"]}
 
 Reading seismograms from the ObsPy FDSN web service
 ---------------------------------------------------
