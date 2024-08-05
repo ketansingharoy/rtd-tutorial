@@ -59,7 +59,7 @@ _fdsnws_dataselect_url: http://service.iris.edu/fdsnws/dataselect/1/query
                    sac: AttribDict({'stlo': -106.457133, 'stla': 34.945981, 'stel': 1671.0})
 
 
-**Alternatively**, the function ``SeisScan.read_fdsn`` can be used to retrive ``ObsPy.Stream`` with station metadata attached. utilizes `FDSN web service client for ObsPy <https://docs.obspy.org/packages/obspy.clients.fdsn.html>`_ to request ``ObsPy.Stream`` object and station metadata (station coordinates and response information). Finally, it attaches the metadata information to each ``ObsPy.Trace`` of the ``Obspy.Stream`` object and returns the ``Obspy.Stream`` object. The following example is similar to the previous example.
+**Alternatively**, the function ``SeisScan.read_fdsn`` can be used to retrive ``ObsPy.Stream`` with station metadata attached. It utilizes `FDSN web service client for ObsPy <https://docs.obspy.org/packages/obspy.clients.fdsn.html>`_ to request ``ObsPy.Stream`` object and station metadata (station coordinates and response information). Finally, it attaches the metadata information to each ``ObsPy.Trace`` of the ``Obspy.Stream`` object and returns the ``Obspy.Stream`` object. The following example is similar to the previous example.
 
 >>> import SeisScan as ss
 >>>
