@@ -19,8 +19,8 @@ The function returns four quantities which are described below.
 
 Let's extract information
 
->>> evt0 = UTCDateTime(event_dict["evt0"])
->>> evlo = event_dict["evlo"]
->>> evla = event_dict["evla"]
->>> evdp = event_dict["evdp"]
->>> mag = event_dict["mag"]
+>>> evt0 = UTCDateTime(event_dict["evt0"])    # event origin time
+>>> evlo = event_dict["evlo"]                 # event longitude
+>>> evla = event_dict["evla"]                 # event latitude
+>>> evdp = event_dict["evdp"]                 # event depth (km)
+>>> mag = event_dict["mag"]                   # event magnitude
