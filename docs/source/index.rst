@@ -21,6 +21,7 @@ Contents
 
    Installation
    Data Structure
+   Example Data
    Tuning SeisScan
       Choice of minimum interstation distance and frequency range of interest (Coherency analysis)
       Choice of sliding window length for estimating Peak Cross-correlation Function
