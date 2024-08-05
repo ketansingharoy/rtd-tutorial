@@ -1,6 +1,7 @@
 Data Structure
 ===================
 The following datasets are required:
+
 	1. ``Obspy.Stream`` with station metadata added.
 	2. Station ``Subnetworks``.
 
