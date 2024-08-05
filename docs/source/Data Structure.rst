@@ -26,12 +26,11 @@ An ``ObsPy.Stream`` object contains a number of ``Obspy.Trace`` objects. Station
 
 Station coordinates can be attached to each ``Obspy.Trace`` as shown below.
 
-::
-for tr in st:
-	coordinates = inventory.get_coordinates(tr.id, datetime=tr.stats.starttime)
-	tr.stats.sac.stlo = coordinates['longitude']
-	tr.stats.sac.stla = coordinates['latitude']
-	tr.stats.sac.stel = coordinates['elevation']
+>>> for tr in st:
+>>>	coordinates = inventory.get_coordinates(tr.id, datetime=tr.stats.starttime)
+>>>	tr.stats.sac.stlo = coordinates['longitude']
+>>>	tr.stats.sac.stla = coordinates['latitude']
+>>>	tr.stats.sac.stel = coordinates['elevation']
 
 
 Station Subnetworks
