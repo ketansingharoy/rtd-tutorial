@@ -45,7 +45,7 @@ Station coordinates can be attached to each ``Obspy.Trace`` as shown below.
 
 
 
-2. Station ``Subnetworks``
+2. Station Subnetworks
 --------------------------
 A ``Subnetwork`` is a station cluster where the central station is defined as the reference station, whereas the remaining stations are called secondary stations. It is represented by a ``dictionary`` with two keys, ``"reference"`` and ``"secondaries"``. The value of ``"reference"`` is the central station code and the value of ``"secondaries"`` is a ``list`` of secondary station codes. An example is given below.
 
