@@ -58,8 +58,8 @@ _fdsnws_dataselect_url: http://service.iris.edu/fdsnws/dataselect/1/query
                    sac: AttribDict({'stlo': -106.457133, 'stla': 34.945981, 'stel': 1671.0})
 
 
-Alternatively:
--------------
+.. role:: red
+:red: Alternatively
 The function ``SeisScan.read_fdsn`` 
 
 
