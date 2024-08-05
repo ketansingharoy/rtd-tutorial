@@ -99,7 +99,7 @@ A ``Subnetwork`` is a station cluster where the central station is defined as th
 
 >>> subnetwork = {"reference": "STA01", "secondaries":["STA02", "STA03"]}
 
-A ``Subnetworks`` is a ``list`` of subnetworks.
+A ``Subnetworks`` is a ``list`` of ``Subnetworks``.
 
 Example data
 ------------
