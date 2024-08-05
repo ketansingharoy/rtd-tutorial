@@ -7,15 +7,27 @@ The following datasets are required:
 
 ObsPy.Stream with station metadata added
 ----------------------------------------
-An ``ObsPy.Stream`` object contains a number of ``Obspy.Trace`` objects. Station coordinates are to be attached to each ``Obspy.Trace``. Optionally, station response information can also be attached to each trace. Let's follow the `ObsPy example <https://docs.obspy.org/packages/obspy.clients.fdsn.html>`_ perform the following example where we shall download data from FDSN webserver at IRIS with ``ObsPy`` package.
+An ``ObsPy.Stream`` object contains a number of ``Obspy.Trace`` objects. Station coordinates are to be attached to each ``Obspy.Trace``. Optionally, station response information can also be attached to ``Obspy.Trace``. Let's follow the `ObsPy example <https://docs.obspy.org/packages/obspy.clients.fdsn.html>`_ to download data and metadata.
 
+>>> from obspy import UTCDateTime
+>>> from obspy.clients.fdsn import Client
+>>> client = Client("IRIS")
+>>>
+>>> #--- Define starttime and endtime
+>>> t1 = UTCDateTime("2010-02-27T06:45:00.000")
+>>> t2 = t1 + 60
+>>>
+>>> #--- Download Stream
+>>> st = client.get_waveforms("IU", "ANMO", "00", "LHZ", t1, t2)
+>>>
+>>> #--- Download station metadata
+>>> inventory = client.get_stations(network="IU", station="ANMO", location="00", channel="LHZ", starttime=t1, endtime=t2)
 
 >>> from obspy.core import AttribDict
 >>> tr.stats.sac = AttribDict()
 >>> tr.stats.sac.stlo = longitude
 >>> tr.stats.sac.stla = latitude
 
-Optionally, we can attach station response information with each trace
 
 Station Subnetworks
 -------------------
