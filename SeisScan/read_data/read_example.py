@@ -6,7 +6,20 @@ from obspy.taup import taup_create
 
 def read_example():
     """
-    Returns example data. This function returns Obspy.Stream, a list of reference_secondaries and a path to earth model.
+    Reads example data. This function returns Obspy.Stream, a list of reference_secondaries and a path to earth model.
+    
+    Returns
+    -------
+    event_dict: dict
+        Event information such as origin time, longitude, latitude, depth (km), magnitude.
+    st: obspy.core.stream.Stream
+        Waveform with station metadata added.
+    inventory: ObsPy.Inventory
+        Station metadata (coordinates, response information etc).
+    rs_file: list
+        A list of Subnetworks.
+    model_name: str
+        An earth model name (okl).
     """
 
     #--- example data directory
