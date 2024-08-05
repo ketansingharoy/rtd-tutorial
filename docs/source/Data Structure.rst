@@ -59,6 +59,7 @@ _fdsnws_dataselect_url: http://service.iris.edu/fdsnws/dataselect/1/query
 
 
 Alternatively:
+-------------
 The function ``SeisScan.read_fdsn`` 
 
 
