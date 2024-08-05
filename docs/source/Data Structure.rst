@@ -68,6 +68,29 @@ _fdsnws_dataselect_url: http://service.iris.edu/fdsnws/dataselect/1/query
 >>>
 >>> st = ss.read_fdsn(starttime, endtime, "IU", "ANMO", "00", "LHZ", provider="IRIS")
 >>> print(st[0].stats)
+               network: IU
+               station: ANMO
+              location: 00
+               channel: LHZ
+             starttime: 2010-02-27T06:45:00.069538Z
+               endtime: 2010-02-27T06:45:59.069538Z
+         sampling_rate: 1.0
+                 delta: 1.0
+                  npts: 60
+                 calib: 1.0
+_fdsnws_dataselect_url: http://service.iris.edu/fdsnws/dataselect/1/query
+               _format: MSEED
+                 mseed: AttribDict({'dataquality': 'M', 'number_of_records': 1, 'encoding': 'STEIM2', 'byteorder': '>', 'record_length': 512, 'filesize': 512})
+            processing: ['ObsPy 1.4.0: trim(endtime=UTCDateTime(2010, 2, 27, 6, 46, 0, 69538)::fill_value=None::nearest_sample=True::pad=False::starttime=UTCDateTime(2010, 2, 27, 6, 45, 0, 69538))']
+              response: Channel Response
+	From m/s (Velocity in Meters Per Second) to counts (Digital Counts)
+	Overall Sensitivity: 3.25959e+09 defined at 0.020 Hz
+	3 stages:
+		Stage 1: PolesZerosResponseStage from m/s to V, gain: 1952.1
+		Stage 2: CoefficientsTypeResponseStage from V to counts, gain: 1.67772e+06
+		Stage 3: CoefficientsTypeResponseStage from counts to counts, gain: 1
+                   sac: AttribDict({'stlo': -106.457133, 'stla': 34.945981, 'stel': 1671.0})
+
 
 
 2. Station Subnetworks
