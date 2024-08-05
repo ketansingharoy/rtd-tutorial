@@ -15,14 +15,15 @@ An ``ObsPy.Stream`` object contains a number of ``Obspy.Trace`` objects. Station
 >>> client = Client("IRIS")
 >>>
 >>> #--- Define starttime and endtime
->>> t1 = UTCDateTime("2010-02-27T06:45:00.000")
->>> t2 = t1 + 60
+>>> starttime = UTCDateTime("2010-02-27T06:45:00.000")
+>>> endtime = starttime + 60
 >>>
 >>> #--- Download Stream
->>> st = client.get_waveforms("IU", "ANMO", "00", "LHZ", t1, t2, attach_response=True)
+>>> st = client.get_waveforms("IU", "ANMO", "00", "LHZ", starttime, endtime, attach_response=True)
 >>>
 >>> #--- Download station metadata
->>> inventory = client.get_stations(network="IU", station="ANMO", location="00", channel="LHZ", starttime=t1, endtime=t2)
+>>> inventory = client.get_stations(network="IU", station="ANMO", location="00", channel="LHZ",
+>>>				    starttime=starttime, endtime=endtime, level="response")
 
 Station coordinates can be attached to each ``Obspy.Trace`` as shown below.
 
@@ -58,7 +59,22 @@ _fdsnws_dataselect_url: http://service.iris.edu/fdsnws/dataselect/1/query
                    sac: AttribDict({'stlo': -106.457133, 'stla': 34.945981, 'stel': 1671.0})
 
 
-**Alternatively**, the function ``SeisScan.read_fdsn`` 
+**Alternatively**, the function ``SeisScan.read_fdsn`` can be used to retrive ``ObsPy.Stream`` with station metadata attached. utilizes `FDSN web service client for ObsPy <https://docs.obspy.org/packages/obspy.clients.fdsn.html>`_ to request ``ObsPy.Stream`` object and station metadata (station coordinates and response information). Finally, it attaches the metadata information to each ``ObsPy.Trace`` of the ``Obspy.Stream`` object and returns the ``Obspy.Stream`` object. The following example is similar to the previous example.
+
+>>> import SeisScan as ss
+>>>
+>>> provider = "IRIS" # key string for FDSN web server
+>>> network = "IU"
+>>> station = "ANMO"
+>>> location = "00"
+>>> channel = "LHZ"
+>>> attach_coordinates = True
+>>> attach_response = True
+>>> starttime = UTCDateTime("2010-02-27T06:45:00.000")
+>>> endtime = starttime + 60
+>>>
+>>> st = ss.read_fdsn(starttime, endtime, network, station, location, channel, provider=provider)
+>>> print(st[0].stats)
 
 
 2. Station Subnetworks
