@@ -10,6 +10,7 @@ ObsPy.Stream with station metadata added
 An ``ObsPy.Stream`` object contains a number of ``Obspy.Trace`` objects. Station coordinates are to be attached to each ``Obspy.Trace``. Optionally, station response information can also be attached to ``Obspy.Trace``. Let's follow the `ObsPy example <https://docs.obspy.org/packages/obspy.clients.fdsn.html>`_ to download data and metadata.
 
 >>> from obspy import UTCDateTime
+>>> from obspy.core import AttribDict
 >>> from obspy.clients.fdsn import Client
 >>> client = Client("IRIS")
 >>>
@@ -23,10 +24,13 @@ An ``ObsPy.Stream`` object contains a number of ``Obspy.Trace`` objects. Station
 >>> #--- Download station metadata
 >>> inventory = client.get_stations(network="IU", station="ANMO", location="00", channel="LHZ", starttime=t1, endtime=t2)
 
->>> from obspy.core import AttribDict
->>> tr.stats.sac = AttribDict()
->>> tr.stats.sac.stlo = longitude
->>> tr.stats.sac.stla = latitude
+Station coordinates can be attached to each ``Obspy.Trace` as shown below.
+
+>>> for tr in st:
+	coordinates = inventory.get_coordinates(tr.id, datetime=tr.stats.starttime)
+	tr.stats.sac.stlo = coordinates['longitude']
+	tr.stats.sac.stla = coordinates['latitude']
+	tr.stats.sac.stel = coordinates['elevation']
 
 
 Station Subnetworks
