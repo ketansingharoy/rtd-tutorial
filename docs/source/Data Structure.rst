@@ -24,7 +24,7 @@ An ``ObsPy.Stream`` object contains a number of ``Obspy.Trace`` objects. Station
 >>> #--- Download station metadata
 >>> inventory = client.get_stations(network="IU", station="ANMO", location="00", channel="LHZ", starttime=t1, endtime=t2)
 
-Station coordinates can be attached to each ``Obspy.Trace` as shown below.
+Station coordinates can be attached to each ``Obspy.Trace`` as shown below.
 
 >>> for tr in st:
 	coordinates = inventory.get_coordinates(tr.id, datetime=tr.stats.starttime)
