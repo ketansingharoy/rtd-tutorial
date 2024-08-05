@@ -29,7 +29,7 @@ Let's extract the event information.
 
 
 
-** References **
+**References**
 
 1. Quinones L. 2021. Tracking induced seismicity in the Fort Worth Basin, Texas and Northern Oklahoma using local and large‐N style arrays, Earth Sci. Theses and Dissertations 22 , available at https://scholar.smu.edu/hum_sci_earthsciences_etds/22.
 
