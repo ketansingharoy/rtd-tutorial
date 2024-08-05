@@ -19,7 +19,7 @@ An ``ObsPy.Stream`` object contains a number of ``Obspy.Trace`` objects. Station
 >>> t2 = t1 + 60
 >>>
 >>> #--- Download Stream
->>> st = client.get_waveforms("IU", "ANMO", "00", "LHZ", t1, t2)
+>>> st = client.get_waveforms("IU", "ANMO", "00", "LHZ", t1, t2, attach_response=True)
 >>>
 >>> #--- Download station metadata
 >>> inventory = client.get_stations(network="IU", station="ANMO", location="00", channel="LHZ", starttime=t1, endtime=t2)
