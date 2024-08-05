@@ -33,11 +33,11 @@ Station coordinates can be attached to each ``Obspy.Trace`` as shown below.
 >>>	tr.stats.sac.stlo = coordinates['longitude']
 >>>	tr.stats.sac.stla = coordinates['latitude']
 >>>	tr.stats.sac.stel = coordinates['elevation']
->>>
->>> print(st[0].stats)
-               network: IU
-               station: ANMO
-              location: 00
+#>>>
+#>>> print(st[0].stats)
+#               network: IU
+#               station: ANMO
+#              location: 00
                channel: LHZ
              starttime: 2010-02-27T06:45:00.069538Z
                endtime: 2010-02-27T06:45:59.069538Z
