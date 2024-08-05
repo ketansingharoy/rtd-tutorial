@@ -1,7 +1,7 @@
 Welcome to SeisScan Documentation!
 ==================================
 
-.. image:: ../../SMU_logo.png
+.. image:: ../../SMU_logo_0.png
     :width: 100
 
 .. image:: ../../SeisScan_fig.png
