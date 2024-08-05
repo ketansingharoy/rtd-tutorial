@@ -6,8 +6,7 @@ from obspy.taup import taup_create
 
 def read_example():
     """
-    Description:
-        Reads example data. This function returns Obspy.Stream, a list of reference_secondaries and a path to earth model.
+    Returns example data. This function returns Obspy.Stream, a list of reference_secondaries and a path to earth model.
     """
 
     #--- example data directory
