@@ -60,7 +60,7 @@ _fdsnws_dataselect_url: http://service.iris.edu/fdsnws/dataselect/1/query
 
 2. Station Subnetworks
 ----------------------
-A ``Subnetwork`` is a station cluster where the central station is defined as the reference station, whereas the remaining stations are called secondary stations. It is represented by a ``Dictionary`` with two keys, "reference" and "secondaries".
+A ``Subnetwork`` is a station cluster where the central station is defined as the reference station, whereas the remaining stations are called secondary stations. It is represented by a ``Dictionary`` with two keys, ``"reference"`` and ``"secondaries"``.
 
 >>> subnetwork = {"reference": "STA01", "secondaries":["STA02", "STA03"]}
 
