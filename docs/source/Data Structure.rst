@@ -28,6 +28,7 @@ Station coordinates can be attached to each ``Obspy.Trace`` as shown below.
 
 >>> for tr in st:
 >>>	coordinates = inventory.get_coordinates(tr.id, datetime=tr.stats.starttime)
+>>>	tr.stats.sac = AttribDict()
 >>>	tr.stats.sac.stlo = coordinates['longitude']
 >>>	tr.stats.sac.stla = coordinates['latitude']
 >>>	tr.stats.sac.stel = coordinates['elevation']
