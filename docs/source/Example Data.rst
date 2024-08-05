@@ -30,5 +30,7 @@ Let's extract the event information.
 
 
 ** References **
+
 1. Quinones L. 2021. Tracking induced seismicity in the Fort Worth Basin, Texas and Northern Oklahoma using local and large‐N style arrays, Earth Sci. Theses and Dissertations 22 , available at https://scholar.smu.edu/hum_sci_earthsciences_etds/22.
+
 2. Sweet J. R. Anderson K. R. Bilek S. L. Brudzinski M. Chen X. DeShon H. Hayward C. Karplus M. Keranen K., and Langston C., et al. 2018. A community experiment to record the full seismic wavefield in Oklahoma, Seismol. Res. Lett.  89, no. 5, 1923–1930.
