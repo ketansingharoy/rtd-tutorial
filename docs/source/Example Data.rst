@@ -5,15 +5,17 @@ In the entire tutorial, we shall use an example dataset returned by ``SeisScan.r
 >>> import SeisScan as ss
 >>> event_dict, st_main, inventory, rs_list, model_name = ss.read_example()
 
-**event_dict** is a ``dictionary`` containing event information.
+The function returns four quantities which are described below.
 
-``st_main`` is an ``ObsPy.Stream`` with station metadata added.
+  **event_dict** is a ``dictionary`` containing event information.
 
-``inventory`` is an ``ObsPy.Inventory`` of station metadata.
+  **st_main** is an ``ObsPy.Stream`` with station metadata added.
 
-``rs_list`` is a ``Subnetworks`` or a list of ``Subnetwork``.
+  **inventory** is an ``ObsPy.Inventory`` of station metadata.
 
-``model_name`` is an earth model name.
+  **rs_list** is a ``Subnetworks`` or a list of ``Subnetwork``.
+
+  **model_name** is an earth model name.
 
 Let's extract information
 
