@@ -1,5 +1,23 @@
-Reading seismograms
+Data Structure
 ===================
+The following datasets are required:
+	1. ``Obspy.Stream`` with station metadata added.
+	2. Station ``Subnetworks``.
+
+ObsPy.Stream with station metadata added
+----------------------------------------
+An ``ObsPy.Stream`` object contains a number of ``Obspy.Trace`` objects. Station coordinates are to be attached to each ``Obspy.Trace``. Optionally, station response information can also be attached to each trace. Let's follow the `ObsPy example <https://docs.obspy.org/packages/obspy.clients.fdsn.html>_` perform the following example where we shall download data from FDSN webserver at IRIS with ``ObsPy`` package.
+
+
+>>> from obspy.core import AttribDict
+>>> tr.stats.sac = AttribDict()
+>>> tr.stats.sac.stlo = longitude
+>>> tr.stats.sac.stla = latitude
+
+Optionally, we can attach station response information with each trace
+
+Station Subnetworks
+-------------------
 
 Reading seismograms from the ObsPy FDSN web service
 ---------------------------------------------------
