@@ -12,7 +12,7 @@ def read_example():
     -------
     event_dict: dict
         Event information such as origin time, longitude, latitude, depth (km), magnitude.
-    st: obspy.core.stream.Stream
+    st: ObsPy.Stream
         Waveform with station metadata added.
     inventory: ObsPy.Inventory
         Station metadata (coordinates, response information etc).
