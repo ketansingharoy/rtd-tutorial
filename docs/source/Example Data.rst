@@ -66,6 +66,13 @@ Select Stream for the stations in the ``Subnetworks``.
 >>>         st += st_main.select(station=secondary)
 
 
+Plot a record section of the selected stream
+
+>>> ss.prs(st.select(channel="DPZ"),
+>>>        evt0, evlo, evla, evdp, scale=0.5, model_name=model_name,
+>>>        xmin=0.0, xmax=6.0, width=15, height=6, handle=True)
+
+
 **References**
 
 1. Quinones L. 2021. Tracking induced seismicity in the Fort Worth Basin, Texas and Northern Oklahoma using local and large‐N style arrays, Earth Sci. Theses and Dissertations 22 , available at https://scholar.smu.edu/hum_sci_earthsciences_etds/22.
