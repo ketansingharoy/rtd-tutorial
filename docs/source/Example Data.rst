@@ -72,6 +72,9 @@ Plot a record section of the selected stream
 >>>        evt0, evlo, evla, evdp, scale=0.5, model_name=model_name,
 >>>        xmin=0.0, xmax=6.0, width=15, height=6, handle=True)
 
+.. image:: ../../usage/prs_selected_station_raw.png
+    :width: 1000
+
 
 **References**
 
