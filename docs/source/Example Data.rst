@@ -76,7 +76,7 @@ Plot a record section of the selected stream
     :width: 1000
 
 
-**Note:** The selected stream, subnetworks, inventory and earth model will be used in the remaining tutorial.
+**Note: The selected stream, subnetworks, inventory and earth model will be used in the remaining tutorial.**
 
 
 **References**
