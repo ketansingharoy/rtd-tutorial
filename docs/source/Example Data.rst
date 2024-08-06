@@ -5,7 +5,7 @@ In the entire tutorial, we shall use an example dataset returned by ``SeisScan.r
 >>> from obspy import UTCDateTime
 >>> import SeisScan as ss
 >>>
->>> event_dict, st_main, inventory, rs_list, model_name = ss.read_example()
+>>> event_dict, st_main, inventory, subnetworks, model_name = ss.read_example()
 
 The function returns four quantities which are described below.
 
@@ -15,7 +15,7 @@ The function returns four quantities which are described below.
 
   **inventory** is an ``ObsPy.Inventory`` of station metadata.
 
-  **rs_list** is a ``Subnetworks`` or a list of ``Subnetwork``.
+  **subnetworks** is a list of ``Subnetwork``.
 
   **model_name** is an earth model name.
 
@@ -27,7 +27,17 @@ Let's extract the event information.
 >>> evdp = event_dict["evdp"]                 # event depth (km)
 >>> mag = event_dict["mag"]                   # event magnitude
 
+Print the ``Subnetworks``.
 
+>>> print(subnetworks)
+[{'reference': '1002', 'secondaries': ['1001', '1003']},
+ {'reference': '1041', 'secondaries': ['5019', '5020', '5025', '5026']},
+ {'reference': '1073', 'secondaries': ['5004', '5005', '5012', '5013']},
+ {'reference': '1128', 'secondaries': ['1127', '1129']},
+ {'reference': '2005', 'secondaries': ['2004', '2006']},
+ {'reference': '2048', 'secondaries': ['2047', '2049']},
+ {'reference': '3002', 'secondaries': ['3001', '3003']},
+ {'reference': '3048', 'secondaries': ['3047', '3049']}]
 
 **References**
 
