@@ -8,6 +8,14 @@ Read example data.
 >>>
 >>> event_dict, st_main, inventory, subnetworks, model_name = ss.read_example()
 
+Event information
+
+>>> evt0 = UTCDateTime(event_dict["evt0"])    # event origin time
+>>> evlo = event_dict["evlo"]                 # event longitude
+>>> evla = event_dict["evla"]                 # event latitude
+>>> evdp = event_dict["evdp"]                 # event depth (km)
+>>> mag = event_dict["mag"]                   # event magnitude
+
 Select Stream for the stations in the ``Subnetworks``.
 
 >>> from obspy import Stream
