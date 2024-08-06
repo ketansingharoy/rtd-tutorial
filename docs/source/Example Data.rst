@@ -54,8 +54,8 @@ Plot a record section of the stream using ``SeisScan.prs`` function.
 
 Select Stream for the stations in the ``Subnetworks``.
 
-st = Stream()
-
+>>> st = Stream()
+>>> 
 >>> for subnetwork in subnetworks:
 >>>     reference = subnetwork["reference"]
 >>>     secondaries = subnetwork["secondaries"]
