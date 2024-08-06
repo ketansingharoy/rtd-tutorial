@@ -65,6 +65,7 @@ Compute characteristic function (Local Similarity)
 >>> n_workers = os.cpu_count() - 2
 >>> dask_client = dask_Client(n_workers=n_workers)
 >>>
+>>> #--- important parameters to generate the characteristic function
 >>> channels = ['DPZ', 'DPN', 'DPE']
 >>> w = 0.75 # window length in seconds
 >>> dt = 0.05 # stride in seconds
