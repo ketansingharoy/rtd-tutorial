@@ -41,6 +41,13 @@ Print the ``Subnetworks``.
      {'reference': '3002', 'secondaries': ['3001', '3003']},
      {'reference': '3048', 'secondaries': ['3047', '3049']}]
 
+Plot a record section of the stream using ``SeisScan.prs`` function.
+
+>>> fig = ss.prs(st_main.select(channel="DPZ"),
+                 evt0, evlo, evla, evdp, scale=0.1, model_name=model_name,
+                 xmin=0.0, xmax=6.0, width=15, height=6, handle=True)
+
+
 **References**
 
 1. Quinones L. 2021. Tracking induced seismicity in the Fort Worth Basin, Texas and Northern Oklahoma using local and large‐N style arrays, Earth Sci. Theses and Dissertations 22 , available at https://scholar.smu.edu/hum_sci_earthsciences_etds/22.
