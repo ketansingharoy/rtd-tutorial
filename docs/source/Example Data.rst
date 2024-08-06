@@ -41,6 +41,7 @@ Print the ``Subnetworks``.
      {'reference': '3002', 'secondaries': ['3001', '3003']},
      {'reference': '3048', 'secondaries': ['3047', '3049']}]
 
+
 Plot a record section of the stream using ``SeisScan.prs`` function.
 
 >>> ss.prs(st_main.select(channel="DPZ"),
@@ -49,6 +50,21 @@ Plot a record section of the stream using ``SeisScan.prs`` function.
 
 .. image:: ../../usage/prs_all_station_raw.png
     :width: 1000
+
+
+Select Stream for the stations in the ``Subnetworks``.
+
+st = Stream()
+
+>>> for subnetwork in subnetworks:
+        reference = subnetwork["reference"]
+        secondaries = subnetwork["secondaries"]
+        
+        st += st_main.select(station=reference)
+        
+        for secondary in secondaries:
+            st += st_main.select(station=secondary)
+
 
 **References**
 
