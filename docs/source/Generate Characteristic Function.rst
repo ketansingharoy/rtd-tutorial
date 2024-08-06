@@ -58,14 +58,23 @@ Pre-process data.
 
 Compute characteristic function (Local Similarity)
 
+>>>import dask
+>>> from dask.distributed import Client as dask_Client
+>>>
+>>> #--- start dask client for parallel processing
+>>> n_workers = os.cpu_count() - 2
+>>> dask_client = dask_Client(n_workers=n_workers)
+>>>
 >>> channels = ['DPZ', 'DPN', 'DPE']
 >>> w = 0.75 # window length in seconds
 >>> dt = 0.05 # stride in seconds
 >>> max_lag = 0.1 # maximum lag in seconds
 >>> 
 >>> st_dls = Stream()
->>> 
+>>>
 >>> for channel in channels:
 >>>     _, _, _, _, _, st_dls_ = ss.do_ls(st_proc, channel, subnetworks=subnetworks, w=w, dt=dt, max_lag=max_lag, dask_client=dask_client)
 >>>     st_dls += st_dls_
-
+>>>
+>>> #--- close dask client
+>>> dask_client.close()
