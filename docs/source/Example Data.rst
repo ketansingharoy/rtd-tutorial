@@ -54,6 +54,8 @@ Plot a record section of the stream using ``SeisScan.prs`` function.
 
 Select Stream for the stations in the ``Subnetworks``.
 
+>>> from obspy import Stream
+>>>
 >>> st = Stream()
 >>> 
 >>> for subnetwork in subnetworks:
