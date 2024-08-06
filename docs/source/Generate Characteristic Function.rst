@@ -37,7 +37,7 @@ Pre-process data.
 >>> 
 >>> #--- rotation from 'Z12' to 'ZNE
 >>> st_proc.rotate('->ZNE', inventory=inventory);
-
+>>> 
 >>> #--- filter
 >>> f1, f2 = 25.0, 75.0
 >>> st_proc.select(component='Z').filter('bandpass', freqmin=f1, freqmax=f2);
@@ -48,7 +48,7 @@ Pre-process data.
 >>> 
 >>> #--- Merge traces with similar seed_id
 >>> st_proc.merge(method=1, fill_value=0);
-
+>>> 
 >>> #--- Trim the stream so that every trace has similar starttime and endtime
 >>> starttime = min([tr.stats.starttime for tr in st_proc])
 >>> endtime = max([tr.stats.endtime for tr in st_proc])
