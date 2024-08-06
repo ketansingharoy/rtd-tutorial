@@ -43,9 +43,9 @@ Print the ``Subnetworks``.
 
 Plot a record section of the stream using ``SeisScan.prs`` function.
 
->>> fig = ss.prs(st_main.select(channel="DPZ"),
-                 evt0, evlo, evla, evdp, scale=0.1, model_name=model_name,
-                 xmin=0.0, xmax=6.0, width=15, height=6, handle=True)
+>>> ss.prs(st_main.select(channel="DPZ"),
+           evt0, evlo, evla, evdp, scale=0.1, model_name=model_name,
+           xmin=0.0, xmax=6.0, width=15, height=6, handle=True)
 
 
 **References**
