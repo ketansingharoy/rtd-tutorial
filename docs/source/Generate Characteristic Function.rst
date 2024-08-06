@@ -1,11 +1,16 @@
 Generate Characteristic Function
 ================================
 
+Import libraries
+
+>>> from obspy import UTCDateTime, Stream
+>>> import dask
+>>> from dask.distributed import Client as dask_Client
+>>>
+>>> import SeisScan as ss
+
 Read example data.
 
->>> from obspy import UTCDateTime
->>> import SeisScan as ss
->>>
 >>> event_dict, st_main, inventory, subnetworks, model_name = ss.read_example()
 
 Event information
@@ -18,8 +23,6 @@ Event information
 
 Select Stream for the stations in the ``Subnetworks``.
 
->>> from obspy import Stream
->>>
 >>> st = Stream()
 >>> 
 >>> for subnetwork in subnetworks:
@@ -33,8 +36,6 @@ Select Stream for the stations in the ``Subnetworks``.
 
 Pre-process data.
 
->>> from obspy import Stream
->>>
 >>> #--- take a copy of the selected stream
 >>> st_proc = st.copy()
 >>> 
@@ -66,9 +67,6 @@ Pre-process data.
 
 Compute characteristic function (Local Similarity)
 
->>> import dask
->>> from dask.distributed import Client as dask_Client
->>>
 >>> #--- start dask client for parallel processing
 >>> n_workers = os.cpu_count() - 2
 >>> dask_client = dask_Client(n_workers=n_workers)
