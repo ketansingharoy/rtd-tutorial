@@ -58,7 +58,7 @@ Pre-process data.
 
 Compute characteristic function (Local Similarity)
 
->>>import dask
+>>> import dask
 >>> from dask.distributed import Client as dask_Client
 >>>
 >>> #--- start dask client for parallel processing
