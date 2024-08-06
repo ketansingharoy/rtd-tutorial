@@ -57,13 +57,13 @@ Select Stream for the stations in the ``Subnetworks``.
 st = Stream()
 
 >>> for subnetwork in subnetworks:
-        reference = subnetwork["reference"]
-        secondaries = subnetwork["secondaries"]
-        
-        st += st_main.select(station=reference)
-        
-        for secondary in secondaries:
-            st += st_main.select(station=secondary)
+>>>     reference = subnetwork["reference"]
+>>>     secondaries = subnetwork["secondaries"]
+>>>     
+>>>     st += st_main.select(station=reference)
+>>>     
+>>>     for secondary in secondaries:
+>>>         st += st_main.select(station=secondary)
 
 
 **References**
