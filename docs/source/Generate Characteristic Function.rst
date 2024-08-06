@@ -79,3 +79,14 @@ Compute characteristic function (Local Similarity)
 >>>
 >>> #--- close dask client
 >>> dask_client.close()
+
+Plot a record section of the characteristic functions
+
+>>> ss.prs(st_dls.select(channel="DPZ"),
+>>>        evt0, evlo, evla, evdp, scale=0.5, model_name=model_name,
+>>>        xmin=-2, xmax=10, width=15, height=6, handle=True)
+
+.. image:: ../../usage/prs_dls.png
+    :width: 1000
+
+
