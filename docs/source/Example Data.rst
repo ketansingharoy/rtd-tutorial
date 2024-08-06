@@ -47,6 +47,8 @@ Plot a record section of the stream using ``SeisScan.prs`` function.
            evt0, evlo, evla, evdp, scale=0.1, model_name=model_name,
            xmin=0.0, xmax=6.0, width=15, height=6, handle=True)
 
+.. image:: ../../usage/prs_all_station_raw.png
+    :width: 600
 
 **References**
 
